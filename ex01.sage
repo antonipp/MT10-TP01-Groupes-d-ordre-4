@@ -14,3 +14,6 @@ e2 = element_neutre(ZZ2xZZ2_loi)
 
 symetriques(ZZ4,ZZ4_loi,e1)
 symetriques(ZZ2xZZ2,ZZ2xZZ2_loi,e2)
+
+a1 = associativite(ZZ4_loi)
+a2 = associativite(ZZ2xZZ2_loi)
