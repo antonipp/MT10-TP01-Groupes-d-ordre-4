@@ -12,27 +12,27 @@ def element_neutre(t):
 	print("La loi n'admet pas d'element neutre!")
 
 
-def symetriques(z,t,e):
-	"""Retourne la table des symetriques pour un ensemble z avec une loi definie par t et avec l'element neutre d'indice e"""
-	sym = [None]*len(z) #initialization du tableau des symetriques
+def symetriques(Z,t,e):
+	"""Retourne la table des symetriques pour un ensemble Z avec une loi definie par t et avec l'element neutre d'indice e"""
+	sym = [None]*len(Z) #initialization du tableau des symetriques
 	for i in range(0,4):
 		for j in range(0,4):
 			if t[i][j]==e and t[j][i]==e:
-				print (str(z[i]) + " est symetrique de " + str(z[j]))
-				sym[i] = z[j]
+				print (str(Z[i]) + " est symetrique de " + str(Z[j]))
+				sym[i] = Z[j]
 	return sym
 
 
 def associativite(t):
 	"""Teste si la loi definie par t est associative"""
-	asso=1
+	asso = 1
 	for i in range(0,4):
 		for j in range(0,4):
 			for k in range(0,4):
-				A=t[i][j]
-				B=t[j][k]
+				A = t[i][j]
+				B = t[j][k]
 				if t[A][k] != t[i][B]:
-					asso=0
+					asso = 0
 	if asso:
 		print("La loi est associative!")
 		return True
