@@ -5,3 +5,14 @@ def morphisme_test(f,G,t,G2,t2):
 			if f[t[i][j]] != t2[f[i]][f[j]]:
 				return False #n'est pas un morphisme
 	return True
+
+
+def isomorphisme_test(G,t,G2,t2):
+	bijections = Permutations([0,1,2,3]).list()
+	for f in bijections:
+		if morphisme_test(f,G,t,G2,t2):
+			print("Une bijection trouvee! Il existe donc un isomorphisme")
+			return True
+	print("Aucune bijection trouvee!")
+	return False
+	

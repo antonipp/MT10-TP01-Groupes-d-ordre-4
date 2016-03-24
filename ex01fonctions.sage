@@ -14,10 +14,13 @@ def element_neutre(t):
 
 def symetriques(z,t,e):
 	"""Retourne la table des symetriques pour un ensemble z avec une loi definie par t et avec l'element neutre d'indice e"""
+	sym = [None]*len(z) #initialization du tableau des symetriques
 	for i in range(0,4):
 		for j in range(0,4):
 			if t[i][j]==e and t[j][i]==e:
-				print (str(z[i]) + " est symetrique de " + str(z[j])) #faire un tableau!
+				print (str(z[i]) + " est symetrique de " + str(z[j]))
+				sym[i] = z[j]
+	return sym
 
 
 def associativite(t):
