@@ -12,8 +12,8 @@ def isomorphisme_test(G,t,G2,t2):
 	bijections = Permutations([0,1,2,3]).list()
 	for f in bijections:
 		if morphisme_test(f,G,t,G2,t2):
-			print("Une bijection trouvee! Il existe donc un isomorphisme.")
+			print("Morphisme bijectif trouve! C'est donc un isomorphisme.")
 			return True
-	print("Aucune bijection trouvee! Il n'existe donc pas d'isomorphisme.")
+	print("Aucun morphisme bijectif trouve! Il n'existe donc pas d'isomorphisme.")
 	return False
 	
