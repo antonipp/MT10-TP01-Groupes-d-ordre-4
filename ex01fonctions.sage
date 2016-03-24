@@ -20,6 +20,7 @@ def symetriques(Z,t,e):
 			if t[i][j]==e and t[j][i]==e:
 				print (str(Z[i]) + " est symetrique de " + str(Z[j]))
 				sym[i] = Z[j]
+	print("\n")
 	return sym
 
 

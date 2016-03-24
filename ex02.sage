@@ -1,21 +1,24 @@
 load("ex02fonctions.sage")
 
-ZZ4 = [0,1,2,3] # Z/Z4
-ZZ4_loi = [[0,1,2,3],[1,2,3,0],[2,3,0,1],[3,0,1,2]] # loi sur Z/Z4
+Z4 = [0,1,2,3] # Z/4Z
+Z4_loi = [[0,1,2,3],[1,2,3,0],[2,3,0,1],[3,0,1,2]] # loi sur Z/4Z
 
-bijections  = Permutations([0,1,2,3]).list() 
+bijections = Permutations([0,1,2,3]).list() 
 
+
+#automorphismes de Z/4Z
 for f in bijections:
-	if morphisme_test(f,ZZ4,ZZ4_loi,ZZ4,ZZ4_loi):
-		print(str(f)+" est un automorphisme de Z/Z4!")
-
-ZZ2xZZ2 = [(0,0),(1,0),(0,1),(1,1)] # Z/Z2 x Z/Z2
-ZZ2xZZ2_loi = [[0,1,2,3],[1,0,3,2],[2,3,0,1],[3,2,1,0]] # loi sur Z/Z2 x Z/Z2
+	if morphisme_test(f,Z4,Z4_loi,Z4,Z4_loi):
+		print(str(f)+" est un automorphisme de Z/4Z")
 
 
+Z2 = [(0,0),(1,0),(0,1),(1,1)] # Z/Z2 x Z/Z2
+Z2_loi = [[0,1,2,3],[1,0,3,2],[2,3,0,1],[3,2,1,0]] # loi sur Z/2Z x Z/2Z
+
+#automorphismes de Z/2Z x Z/2Z
 for f in bijections:
-	if morphisme_test(f,ZZ2xZZ2,ZZ2xZZ2_loi,ZZ2xZZ2,ZZ2xZZ2_loi):
-		print(str(f)+" est un automorphisme de Z/Z2 x Z/Z2!")
+	if morphisme_test(f,Z2,Z2_loi,Z2,Z2_loi):
+		print(str(f)+" est un automorphisme de Z/2Z x Z/2Z")
 
-
-isomorphisme_test(ZZ4,ZZ4_loi,ZZ2xZZ2,ZZ2xZZ2_loi)
+#test d'isomorphisme de Z/4Z et Z/2Z x Z/2Z
+isomorphisme_test(Z4,Z4_loi,Z2,Z2_loi)
