@@ -19,7 +19,7 @@ def symetriques(Z,t,e):
 		for j in range(0,4):
 			if t[i][j]==e and t[j][i]==e:
 				print (str(Z[i]) + " est symetrique de " + str(Z[j]))
-				sym[i] = Z[j]
+				sym[i] = j
 	print("\n")
 	return sym
 
